@@ -35,3 +35,9 @@ $("nav a").click(function(){
   $("nav a").removeClass("active");
   $(this).addClass('active');
 });
+$("#contact-form input[type=submit]").click(function(e) {
+    e.preventDefault();
+    $("#contact-form").submit();
+    alert("Thank you for your message. We will get back to you as soon as possible.");
+    $("#contact-form").trigger("reset");
+ });
